@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 
 function Countdown() {
-    const finishDate = useRef(new Date("09/12/2021").getTime())
+    const finishDate = useRef(new Date("09/19/2021").getTime())
     const [timeLeft, setTimeLeft] = useState("00 días : 00 horas : 00 mínutos : 00 segundos");
 
     // Realizar el calculo del tiempo restante cada segundo desde el momento en el que se muestra el componente

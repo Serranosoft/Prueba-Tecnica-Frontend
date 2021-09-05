@@ -1,3 +1,5 @@
+import logo from "../images/planetExpress.png"
+
 function Hero() {
 
     const moveToCalc = () => {
@@ -22,7 +24,7 @@ function Hero() {
                             transform="translate(100 100)"
                         />
                     </svg>
-                    <img src="/images/planet-express.png" alt="Planet Express" />
+                    <img src={logo} alt="Planet Express" />
                 </div>
             </div>
         </section>
