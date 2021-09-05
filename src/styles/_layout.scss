@@ -1,0 +1,140 @@
+@use "_components";
+@use "_base";
+
+#container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+}
+
+.wrapper {
+  padding: 24px 160px 40px 160px;
+}
+
+#logo {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    grid-area: 1 / 2;
+    width: 100%;
+  }
+  & img {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+#countdown-text {
+  font-size: 16px;
+  line-height: 1;
+  color: white;
+  span {
+    font-weight: bold;
+  }
+}
+
+#newsletter-section {
+  width: 100%;
+  background-color: #151b24;
+  color: white;
+}
+
+#newsletter-wrapper {
+  @extend .grid-2-columns;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+#newsletter-form {
+  @extend .flex-column-center;
+}
+
+#newsletter-submit {
+  @extend .btn;
+  background-color: #324259;
+  margin: 0 auto;
+  font-size: 18px;
+  width: 60%;
+}
+
+#newsletter-info {
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+#content {
+  width: 100%;
+  background-color: #e8e8e8;
+}
+
+#calc-wrapper {
+  @extend .flex-column-center;
+  @extend .wrapper;
+  margin: 0 auto 80px auto;
+  fieldset label > input {
+    color: #1C1C1C;
+    width: 100%;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+#calc-result {
+  font-size: 40px;
+  margin: 16px 0;
+}
+
+#employees-section {
+  @extend .wrapper;
+  width: 100%;
+}
+
+#employees-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  align-items: center;
+  margin: 32px 0 48px 0;
+}
+
+@media(max-width: 768px) {
+  #container {
+    padding: 0;
+  }
+  .wrapper {
+    padding: 8px 16px;
+    margin-bottom: 40px;
+  }
+  #countdown-text span {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+  }
+  #content-wrapper {
+    padding: 24px 8px;
+  }
+  #logo {
+    grid-row: 1;
+    & > * {
+      width: 60%;
+      margin: 0px auto 0px auto;
+    }
+    & img {
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+  #newsletter-form {
+    fieldset {
+      label {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,279 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: 100% Helvetica, sans-serif;
+  color: #1C1C1C;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 16px 40px;
+  background-color: #1F2937;
+  border: 12px dashed white;
+}
+
+span, p {
+  font-size: 19px;
+}
+
+fieldset {
+  width: 100%;
+  border: 0;
+  padding: 0;
+}
+
+label {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 768px) {
+  header {
+    border: 0;
+  }
+}
+.h1, .h2 {
+  font-size: 62px;
+  margin: 16px 0 16px 0;
+}
+
+.h2 {
+  font-size: 42px;
+  text-align: center;
+}
+
+.h3 {
+  font-size: 18px;
+  margin: 0 0 40px 0;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* .highlight-text {
+  font-size: 20px;
+  font-weight: bold;
+} */
+.btn, #newsletter-submit {
+  padding: 12px 32px;
+  margin: 16px 0 0 0;
+  border: 0;
+  border-radius: 16px;
+  font-size: 20px;
+  background: #1f2937;
+  color: white;
+  outline: 0;
+  cursor: pointer;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column-center, #newsletter-form, #calc-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-2-columns, #newsletter-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  margin: 0 auto;
+  border: 3px solid #373c40;
+  background-color: transparent;
+  color: white;
+  outline: 0;
+}
+
+.employee {
+  padding: 8px;
+  box-shadow: 0 0 5px black;
+  border: 1px solid lightgray;
+}
+.employee img {
+  width: 100%;
+  min-height: 180px;
+  max-height: 220px;
+}
+.employee p {
+  font-size: 18px;
+  text-align: center;
+  margin: 8px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .h1, .h2 {
+    font-size: 42px;
+  }
+
+  .h2 {
+    font-size: 28px;
+  }
+
+  .h3 {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  /*   .highlight-text {
+      font-size: 18px;
+    } */
+  .grid-2-columns, #newsletter-wrapper {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+#container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+}
+
+.wrapper, #employees-section, #calc-wrapper {
+  padding: 24px 160px 40px 160px;
+}
+
+#logo {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#logo > * {
+  grid-area: 1/2;
+  width: 100%;
+}
+#logo img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#countdown-text {
+  font-size: 16px;
+  line-height: 1;
+  color: white;
+}
+#countdown-text span {
+  font-weight: bold;
+}
+
+#newsletter-section {
+  width: 100%;
+  background-color: #151b24;
+  color: white;
+}
+
+#newsletter-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+#newsletter-submit {
+  background-color: #324259;
+  margin: 0 auto;
+  font-size: 18px;
+  width: 60%;
+}
+
+#newsletter-info {
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+#content {
+  width: 100%;
+  background-color: #e8e8e8;
+}
+
+#calc-wrapper {
+  margin: 0 auto 80px auto;
+}
+#calc-wrapper fieldset label > input {
+  color: #1C1C1C;
+  width: 100%;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 40px;
+}
+
+#calc-result {
+  font-size: 40px;
+  margin: 16px 0;
+}
+
+#employees-section {
+  width: 100%;
+}
+
+#employees-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  align-items: center;
+  margin: 32px 0 48px 0;
+}
+
+@media (max-width: 768px) {
+  #container {
+    padding: 0;
+  }
+
+  .wrapper, #calc-wrapper, #employees-section {
+    padding: 8px 16px;
+    margin-bottom: 40px;
+  }
+
+  #countdown-text span {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  #content-wrapper {
+    padding: 24px 8px;
+  }
+
+  #logo {
+    grid-row: 1;
+  }
+  #logo > * {
+    width: 60%;
+    margin: 0px auto 0px auto;
+  }
+  #logo img {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  #newsletter-form fieldset label {
+    text-align: center;
+    width: 100%;
+  }
+}/*# sourceMappingURL=app.css.map */
